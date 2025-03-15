@@ -1,4 +1,4 @@
-oh-my-posh init pwsh --config 'C:\Users\RALD\AppData\Local\Programs\oh-my-posh\themes\nu4a.omp.json' | Invoke-Expression
+oh-my-posh init pwsh --config 'YOUR OH MY POSH THEME LOCATION PATH' | Invoke-Expression
 
 Invoke-Expression (& {
     $hook = if ($PSVersionTable.PSVersion.Major -lt 6) { 'prompt' } else { 'pwd' }
@@ -13,7 +13,7 @@ $equalString = "=" * ($length + 4)
 Write-Host "$equalString`n" -ForegroundColor Black -BackgroundColor DarkCyan
 
 
-$apiKey = "nf/EHrwGlqwkd1CDh1OiOg==vmZQxtOQFjZqof51"
+$apiKey = "YOUR API KEY" #Create it by sign in to api.api-ninjas.com
 $url = "https://api.api-ninjas.com/v1/quotes"
 $headers = @{ "X-Api-Key" = $apiKey }
 
@@ -162,7 +162,7 @@ if ($GeoWatcher.Permission -eq 'Denied') {
 
 $culture = [System.Globalization.CultureInfo]::GetCultureInfo("id-ID")
 
-$apiKey = "c67d8a2e4a5db21f418178955133a58e"
+$apiKey = "YOUR API KEY" #Create it on api.openweathermap.org
 $forecastUrl = "https://api.openweathermap.org/data/2.5/forecast?lat=$lat&lon=$lon&appid=$apiKey&units=metric"
 
 try {
